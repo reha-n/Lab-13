@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x, end;
+    
+    // Ask user for input number x
+    cout << "Enter a number: ";
+    cin >> x;
+
+    // Check if x is greater than 0
+    if (x > 0) {
+        // Ask user where to end the table
+        cout << "Enter the number up to which to print the table: ";
+        cin >> end;
+        if(end <=0){
+            cout<< "Invalid! Enter a positive integer.";
+        }
+
+        for (int i = 1; i <= end; ++i) {
+            cout << x << " x " << i << " = " << x * i << endl;
+        }
+    }
+    
+    else {
+        cout << "The number must be greater than 0!" << endl;
+    }
+
+    return 0;
+}
